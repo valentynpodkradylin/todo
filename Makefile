@@ -60,10 +60,6 @@ clean:
 	find . -type f -name "*.pyc" -delete 2>/dev/null || true
 	find . -type f -name "*.pyo" -delete 2>/dev/null || true
 
-# Add development dependencies
-add-dev-deps:
-	uv add --dev pytest ruff
-
 # Show project info
 info:
 	@echo "Project: $(shell grep '^name = ' pyproject.toml | cut -d'"' -f2)"
